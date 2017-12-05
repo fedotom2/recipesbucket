@@ -16,14 +16,6 @@
         	@endif
         </p>
 
-        <p>
-          @if(!empty($update))
-          {{ $update['name'] }} <br>
-          {{ $update['lastname'] }} <br>
-          {{ $update['about'] }} <br>
-          @endif
-        </p>
-
         <button id="edit_btn">Edit profile</button>
         <form action="{{ route('profileEdit') }}" method="post" id="edit_form">
           {{ csrf_field() }}
