@@ -15,6 +15,23 @@
         	{{ $user->about }}
         	@endif
         </p>
+
+        <p>
+          @if(!empty($update))
+          {{ $update['name'] }} <br>
+          {{ $update['lastname'] }} <br>
+          {{ $update['about'] }} <br>
+          @endif
+        </p>
+
+        <button id="edit_btn">Edit profile</button>
+        <form action="{{ route('profileEdit') }}" method="post" id="edit_form">
+          {{ csrf_field() }}
+          <input type="text" name="name" placeholder="Name" value="{{ $user->name }}"><br>
+          <input type="text" name="lastname" placeholder="Lastname" value="{{ $user->lastname }}"><br>
+          <textarea name="about" placeholder="About">{{ $user->about }}</textarea><br>
+          <input type="submit">
+        </form>
       </div>
       <div id="tabs-2">
         <h1>Posts</h1>
@@ -69,6 +86,7 @@
 <script>
     ;(function ($) {
 
+      /* Tabs */
       const links = $('#tabs a');
 
       $('.s > div').hide();
@@ -78,6 +96,16 @@
         $('.s > div').hide();
         $(e.currentTarget.hash).show();
 
+        e.preventDefault();
+      });
+
+      /* Edit profile */
+      const edit_form = $('#edit_form');
+      edit_form.hide();
+
+      const edit_btn = $('#edit_btn');
+      edit_btn.click(function (e) {
+        edit_form.show();
         e.preventDefault();
       });
 

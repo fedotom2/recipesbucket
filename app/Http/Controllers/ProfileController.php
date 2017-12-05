@@ -21,4 +21,28 @@ class ProfileController extends Controller
 				->with('user', $user);
 		}
     }
+
+    public function edit(Request $request)
+    {
+    	if (!Auth::check()) {
+			return redirect('/home');
+		} else {
+			$this->validate($request, [
+	            'name' => 'required|max:255',
+	            'lastname' => 'required|max:255',
+	            'about' => 'required'
+	        ]);
+
+	        $data = $request->all();
+
+			User::where('id', Auth::id())
+				->update(array(
+					'name' => $data['name'],
+					'lastname' => $data['lastname'],
+					'about' => $data['about'],
+				));
+
+			return redirect('/profile');
+		}
+    }
 }
