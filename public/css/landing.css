@@ -66,30 +66,6 @@ h1:nth-child(2) {
   transform: translateY(-100%);
 }
 
-/*.scroll-indicator{
-  width: 80px;
-  margin: 0 auto;
-  position: relative;
-  -webkit-animation: arrow 2s ease infinite;
-}
-.scroll-left, .scroll-right{
-  width: 50px;
-  height: 8px;
-  background: white;
-  position: absolute;
-  top: 175px;
-}
-.scroll-left{
-  transform: rotate(45deg);
-  left: 0;
-  
-}
-.scroll-right{
-  transform: rotate(-45deg);
-  right: 0;
-}
-*/
-
 nav {
   position: fixed;
   width: 100%;
@@ -138,7 +114,7 @@ nav ul li a:hover {
 
 #work {
   width: 100%;
-  height: 1350px;
+  height: 100%;
   background-image: url('');
 }
 
@@ -183,31 +159,6 @@ nav ul li a:hover {
   -webkit-filter: grayscale(70%);
 }
 
-
-
-#bio {
-  width: 100%;
-  height: 1200px;
-  background-image: url('');
-}
-
-#bio-header {
-  letter-spacing: 10px;
-  font-size: 90px;
-}
-
-.bio-text {
-  width: 700px;
-  height: 450px;
-  margin: 0 auto;
-  margin-top: -30px;
-  font: 16px 'Lato', sans-serif;
-  color: #555;
-  letter-spacing: .5px;
-  line-height: 28px;
-  text-align: justify;
-}
-
 .work-history {
   line-height: 15px;
   text-align: left;
@@ -235,19 +186,6 @@ nav ul li a:hover {
 .dates {
   font-size: 13px;
 }
-
-.bio-break {
-  width: 100%;
-  height: 350px;
-  background: linear-gradient(#222, transparent 30%),
-    linear-gradient(0deg, #222, transparent 30%), url('../images/landing/3.jpg');
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
-  -webkit-filter: grayscale(70%);
-}
-
 
 
 #suite {
