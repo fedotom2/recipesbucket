@@ -1,0 +1,125 @@
+html{
+	background-color: #efefef;
+	font-family: "Open Sans", Arial, sans-serif;
+}
+.res{
+	background-color: #fff;
+	width: 700px;
+	margin: 0 auto; 
+	/*border-radius: 10px;
+	border: 5px dashed rgba(255, 244, 0, 0.7);*/
+
+}
+.imgres{
+	width: 700px;
+	height: 400px;
+}
+.res h1{
+	font-size: 32px;
+	text-align: center;
+	margin: 10px auto;
+}
+.res p{
+	padding: 10px;
+}
+.res_autor{
+	position: relative;
+	height: 70px;
+	width: 570px;
+	margin: 0 auto;
+	padding: 24px 28px;
+	border: 1px solid #b8b8b8;
+}
+.res_autor .res_autor_header{
+	position: absolute;
+    top: -13px;
+    padding: 0 12px;
+    font: 9px/1 Roboto,sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    background: #fff;
+ 	transform: translateX(-55%);
+    left: 50%!important;
+}
+.tableres .res_autor_header{
+	position: absolute;
+    top: -13px;
+    padding: 0 12px;
+    font: 9px/1 Roboto,sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    background: #fff;
+ 	transform: translateX(-55%);
+    left: 50%!important;
+}
+
+.autoradv{
+	text-align: center;
+	padding: 26px;
+}
+.bsub{
+	float: right;
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #f44336;
+    margin: -60px 0;
+}
+.bsub a{
+	text-decoration: none;
+	color: black;
+}
+.bsub:hover {
+    background-color: #f44336;
+    color: white;
+}
+.ingredients-list h3{
+	text-align: center;
+}
+.tableres {
+    /* padding: 0 42px; */
+    letter-spacing: 0.1em;
+    line-height: 26px;
+    position: relative;
+    /* height: 70px; */
+    width: 570px;
+    margin: 0 auto;
+    padding: 24px 28px;
+    border: 1px solid #b8b8b8;
+}
+.tableres .nameing{
+	float: left;
+}
+.tableres .value{
+	float: right;	
+}
+.howtores{
+	padding: 26px;
+}
+.howtores h3{
+	text-align: center;
+}
+
+
+.fela {
+    margin: 20px;
+    float: left;
+    border-radius: 50%;
+    background-color: #ebebeb;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 18px;
+    text-align: center;
+}
+.fela p{
+	padding: 10px;
+	text-align: center;
+}
