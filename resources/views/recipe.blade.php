@@ -16,46 +16,13 @@
 		<div class="ingredients-list">
 			<div class="tableres">
 				<p class="res_autor_header">Інгридієнти</p>
+				@foreach($ingredients as $ingredient)
 				<div>
-					<span class="nameing">name_ingridient</span>
-					<span class="value">value</span>
+					<span class="nameing">{{ $ingredient->name }}</span>
+					<span class="value">{{ $ingredient->value }}</span>
 				</div>
 				<br>
-				<div>
-					<span class="nameing">name_ingridient</span>
-					<span class="value">value</span>
-				</div>
-				<br>
-				<div>
-					<span class="nameing">name_ingridient</span>
-					<span class="value">value</span>
-				</div>
-				<br>
-				<div>
-					<span class="nameing">name_ingridient</span>
-					<span class="value">value</span>
-				</div>
-				<br>
-				<div>
-					<span class="nameing">name_ingridient</span>
-					<span class="value">value</span>
-				</div>
-				<br>
-				<div>
-					<span class="nameing">name_ingridient</span>
-					<span class="value">value</span>
-				</div>
-				<br>
-				<div>
-					<span class="nameing">name_ingridient</span>
-					<span class="value">value</span>
-				</div>
-				<br>
-				<div>
-					<span class="nameing">name_ingridient</span>
-					<span class="value">value</span>
-				</div>
-				<br>
+				@endforeach
 			</div>
 		</div>
 		<div class="howtores">
