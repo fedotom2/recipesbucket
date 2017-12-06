@@ -7,8 +7,8 @@
 		<h1>{{ $recipe->title }}</h1>
 		<div class="res_autor">
 			<p class="res_autor_header">Автор рецепта</p>
-			<p>Автор рецепта: Name Lastname</p>
-			<button class="bsub"><a href="#">Показати профіль</a></button>
+			<p>Автор рецепта: {{ $recipe->author->name }} {{ $recipe->author->lastname }}</p>
+			<button class="bsub"><a href="{{ route('profileShow', ['id' => $recipe->author->id]) }}">Показати профіль</a></button>
 		</div>
 		<div class="autoradv">
 			<p>{{ $recipe->description }}</p>

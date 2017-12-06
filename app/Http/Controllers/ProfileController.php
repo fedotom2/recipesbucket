@@ -45,4 +45,18 @@ class ProfileController extends Controller
 			return redirect('/profile');
 		}
     }
+
+    public function show($id)
+    {
+    	if (!Auth::check()) {
+			return redirect('/home');
+		} else {
+			$user = User::find($id);
+
+			return view('profile')
+				->with('css', 'css/profile.css')
+				->with('title', 'Profile')
+				->with('user', $user);
+		}
+    }
 }

@@ -48,6 +48,7 @@ class RecipeController extends Controller
 	{
 		$recipe = Recipe::find($id);
 		$author = User::find($recipe->user_id);
+		$recipe->author = $author;
 
 		return view('recipe')
 			->with('css', 'css/recipe.css')
