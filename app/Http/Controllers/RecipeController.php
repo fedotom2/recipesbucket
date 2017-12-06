@@ -50,6 +50,8 @@ class RecipeController extends Controller
 		$author = User::find($recipe->user_id);
 		$recipe->author = $author;
 
+		$recipe->recipe = preg_split('/[0-9]\./', $recipe->recipe);
+
 		return view('recipe')
 			->with('css', 'css/recipe.css')
 			->with('title', 'Recipe')

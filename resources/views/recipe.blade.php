@@ -60,10 +60,14 @@
 		</div>
 		<div class="howtores">
 			<h3>Приготування</h3>
-			<div>
-				<div class="fela">1</div>
-				<p>{{ $recipe->recipe }}</p>
+
+			@for ($i = 1; $i < count($recipe->recipe); $i++)
+		    <div>
+				<div class="fela">{{ $i }}</div>
+				<p>{{ $recipe->recipe[$i] }}</p>
 			</div>
+			<br>
+			@endfor
 
 		</div>
 	</div>
