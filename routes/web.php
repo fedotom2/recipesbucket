@@ -26,4 +26,8 @@ Route::get('/', function () {
 });
 Route::get('/profile', 'ProfileController@index');
 Route::post('/profile/edit', 'ProfileController@edit')->name('profileEdit');
+
+Route::get('/recipe/add', 'RecipeController@index');
+Route::post('/recipe/add', 'RecipeController@add')->name('recipeAdd');
+
 Route::get('/home', 'HomeController@home')->name('home');

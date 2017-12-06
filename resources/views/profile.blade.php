@@ -35,7 +35,7 @@
       </div>
       <div id="tabs-4">
         <h1>Add recipe</h1>
-          <button class="button button3">Add your recipe!</button>
+          <button class="button button3" id="addRecipe_btn">Add your recipe!</button>
       </div>   
   
     </div>
@@ -98,6 +98,13 @@
       const edit_btn = $('#edit_btn');
       edit_btn.click(function (e) {
         edit_form.show();
+        e.preventDefault();
+      });
+
+      /* Add recipe */
+      const addRecipe_btn = $('#addRecipe_btn');
+      addRecipe_btn.click(function(e) {
+        document.location.href = '/recipe/add';
         e.preventDefault();
       });
 
