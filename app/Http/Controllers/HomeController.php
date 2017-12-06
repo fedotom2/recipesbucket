@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-// use Auth;
+use App\Recipe;
 
 class HomeController extends Controller
 {
@@ -18,16 +18,6 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
 
-    public function landing()
-    {
-        if (Auth::check()) {
-            return redirect('/home');
-        } else {
-            return view('landing');
-        }
-        // return view('landing'); 
-    }
-
     /**
      * Show the application dashboard.
      *
@@ -35,9 +25,12 @@ class HomeController extends Controller
      */
     public function home()
     {
+        $recipes = Recipe::all();
+
         return view('home')
-            ->with('css', '')
-            ->with('title', 'Recipes');
+            ->with('css', 'css/home.css')
+            ->with('title', 'Recipes')
+            ->with('recipes', $recipes);
     }
     
 }
